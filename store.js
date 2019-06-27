@@ -1,7 +1,8 @@
 import { createStore, applyMiddleware } from 'redux'
 import {createLogger} from 'redux-logger'
 
-export const store = createStore((state = '', action) => {
+const middlewares = applyMiddleware(createLogger())
+const reducer = (state = '', action) => {
   switch(action.type) {
     case 'SYNC': 
       return 'sync';
@@ -10,4 +11,5 @@ export const store = createStore((state = '', action) => {
     default:
       return state;
   }
-}, applyMiddleware(createLogger()))
+}
+export const store = createStore(reducer, middlewares)
