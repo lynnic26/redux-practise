@@ -1,4 +1,4 @@
-const { GET_COUNT_ASYNC } from './actions';
+import { GET_COUNT_ASYNC } from './actions';
 
 export const reducers = (state = '', action) => {
   switch(action.type) {
