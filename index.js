@@ -15,8 +15,11 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Hello name={this.state.name} />
+        <Hello />
         <World />
+        <p>
+          在World 组件中点击按钮，并触发一个dispatch，在Hello组件可以订阅store的状态变更并显示更新后的状态
+        </p>
       </div>
     );
   }

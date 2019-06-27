@@ -1,12 +1,15 @@
 import React from 'react';
 import {store} from './store.js'
 
-export default ({ name }) => {
+const { useState } = React
+export default () => {
+  const [name, setName] = useState('')
+  
   store.subscribe(() => {
-    console.log(store.getState())
+    setName(store.getState())
   })
   
   return <h1>
-    
+    {name}
   </h1>
 }
