@@ -13,6 +13,6 @@ export default () => {
   }
   return <h1>
      <input type="button" value="hello, dispatch sync" onClick={onClickSync} /><br/>
-     <input type="button" value="hello, dispatch async" onclick={onClickAsync} />
+     <input type="button" value="hello, dispatch async" onClick={onClickAsync} />
   </h1>
 }
