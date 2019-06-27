@@ -1,4 +1,5 @@
-import { createStore } from 'redux'
+import { createStore, applyMiddleware } from 'redux'
+import {createLogger} from 'redux-logger'
 
 export const store = createStore((state = '', action) => {
   switch(action.type) {
@@ -9,4 +10,4 @@ export const store = createStore((state = '', action) => {
     default:
       return state;
   }
-})
+}, applyMiddleware(createLogger()))
